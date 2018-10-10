@@ -1,0 +1,14 @@
+C:\Users\xiaoy\source\repos\tenbyten\tenbyten\bin\Debug\tenbyten.exe.config
+C:\Users\xiaoy\source\repos\tenbyten\tenbyten\bin\Debug\tenbyten.exe
+C:\Users\xiaoy\source\repos\tenbyten\tenbyten\bin\Debug\tenbyten.pdb
+C:\Users\xiaoy\source\repos\tenbyten\tenbyten\obj\Debug\tenbyten.csprojAssemblyReference.cache
+C:\Users\xiaoy\source\repos\tenbyten\tenbyten\obj\Debug\tenbyten.Tenbyten.resources
+C:\Users\xiaoy\source\repos\tenbyten\tenbyten\obj\Debug\tenbyten.Properties.Resources.resources
+C:\Users\xiaoy\source\repos\tenbyten\tenbyten\obj\Debug\tenbyten.csproj.GenerateResource.cache
+C:\Users\xiaoy\source\repos\tenbyten\tenbyten\obj\Debug\tenbyten.csproj.CoreCompileInputs.cache
+C:\Users\xiaoy\source\repos\tenbyten\tenbyten\obj\Debug\tenbyten.exe
+C:\Users\xiaoy\source\repos\tenbyten\tenbyten\obj\Debug\tenbyten.pdb
+C:\Users\xiaoy\source\repos\tenbyten\tenbyten\bin\Debug\tenbyten.exe.manifest
+C:\Users\xiaoy\source\repos\tenbyten\tenbyten\bin\Debug\tenbyten.application
+C:\Users\xiaoy\source\repos\tenbyten\tenbyten\obj\Debug\tenbyten.exe.manifest
+C:\Users\xiaoy\source\repos\tenbyten\tenbyten\obj\Debug\tenbyten.application
