@@ -129,6 +129,52 @@ namespace tenbyten
             }
         }
 
+        public class small_x : Mask
+        {
+            public List<List<int>> mask_value;
+            public int score = 5;
+
+            public small_x()
+            {
+                Mask m = new Mask();
+                mask_value = m.mask_base;
+                mask_value[1][2] = 1;
+                mask_value[2][1] = 1;
+                mask_value[2][3] = 1;
+                mask_value[3][2] = 1;
+            }
+        }
+
+        public class small_square : Mask
+        {
+            public List<List<int>> mask_value;
+            public int score = 4;
+
+            public small_square()
+            {
+                Mask m = new Mask();
+                mask_value = m.mask_base;
+                mask_value[1][2] = 1;
+                mask_value[2][1] = 1;
+                mask_value[1][1] = 1;
+            }
+        }
+
+        public class sm_tri : Mask
+        {
+            public List<List<int>> mask_value;
+            public int score = 4;
+
+            public sm_tri()
+            {
+                Mask m = new Mask();
+                mask_value = m.mask_base;
+                mask_value[1][2] = 1;
+                mask_value[2][1] = 1;
+                mask_value[2][3] = 1;
+            }
+        }
+
         public class MaskSet
         {
             public List<List<int>> mask_small_i_v;
@@ -139,6 +185,9 @@ namespace tenbyten
             public List<List<int>> mask_small_L_rt;
             public List<List<int>> mask_small_L_lb;
             public List<List<int>> mask_small_L_rb;
+            public List<List<int>> mask_small_x;
+            public List<List<int>> mask_small_square;
+            public List<List<int>> mask_sm_tri;
 
             // a list to store all the masks
             public List<List<List<int>>> mask_list = new List<List<List<int>>>();
@@ -193,6 +242,24 @@ namespace tenbyten
                 mask_small_L_rb = i_small_L_rb.mask_value;
                 mask_list.Add(mask_small_L_rb);
                 score_list.Add(i_small_L_rb.score);
+
+                // small x
+                Mask.small_x i_small_x = new small_x();
+                mask_small_x = i_small_x.mask_value;
+                mask_list.Add(mask_small_x);
+                score_list.Add(i_small_x.score);
+
+                // small square
+                Mask.small_square i_small_square = new small_square();
+                mask_small_square = i_small_square.mask_value;
+                mask_list.Add(mask_small_square);
+                score_list.Add(i_small_square.score);
+
+                // small tri
+                Mask.sm_tri i_sm_tri = new sm_tri();
+                mask_sm_tri = i_sm_tri.mask_value;
+                mask_list.Add(mask_sm_tri);
+                score_list.Add(i_sm_tri.score);
             }
         }
     }

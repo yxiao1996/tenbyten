@@ -46,6 +46,7 @@ namespace tenbyten
             InitializeComponent();
 
             init_main_display();
+            init_tmp_display();
             set_random_mask();
             this.valid_point = find_valid_position(this.mask);
             Console.WriteLine(valid_point.ToString());
@@ -70,12 +71,51 @@ namespace tenbyten
             }
         }
 
+        private void init_tmp_display()
+        {
+            int w = tmp_display0.ColumnCount;
+            int h = tmp_display0.RowCount;
+
+            for (int i = 0; i < w; i++)
+            {
+                for (int j = 0; j < h; j++)
+                {
+                    Label new_label = new Label();
+                    new_label.Name = "Label" + i.ToString() + j.ToString();
+                    tmp_display0.Controls.Add(new_label, i, j);
+                }
+            }
+        }
+
         private void set_random_mask()
         {
             int c_mask = this.masks.mask_list.Count;
             int r_num = random.Next(c_mask);
             this.mask = this.masks.mask_list[r_num];
             this.cur_sco = this.masks.score_list[r_num];
+        }
+
+        private void draw_tmp_display()
+        {
+            // iterate through the current mask
+            int w = this.mask.Count;
+            int h = this.mask[0].Count;
+            Label tmp_label;
+            for (int i = 0; i < h; i++)
+            {
+                for (int j = 0; j < w; j++)
+                {
+                    tmp_label = tmp_display0.GetControlFromPosition(j, i) as Label;
+                    if (this.mask[i][j] == 1)
+                    {
+                        tmp_label.BackColor = Color.Green;
+                    }
+                    else
+                    {
+                        tmp_label.BackColor = Color.White;
+                    }
+                }
+            }
         }
 
         private void click_main(object sender, EventArgs e)
@@ -100,10 +140,11 @@ namespace tenbyten
                 debug.Text = "Score: " + this.score.ToString();
                 check_row_col();
                 set_random_mask();
+                draw_tmp_display();
                 this.valid_point = find_valid_position(this.mask);
                 if (this.valid_point.Count == 0)
                 {
-                    debug.Text = "no valid allocation anymore!";
+                    debug.Text = debug.Text + " no valid allocation anymore!";
                     Console.WriteLine("no valid allocation anymore!");
                     return;
                 }
