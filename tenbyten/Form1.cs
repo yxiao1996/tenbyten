@@ -144,7 +144,7 @@ namespace tenbyten
                 this.valid_point = find_valid_position(this.mask);
                 if (this.valid_point.Count == 0)
                 {
-                    debug.Text = debug.Text + " no valid allocation anymore!";
+                    debug.Text = debug.Text + " \n no valid allocation anymore!";
                     Console.WriteLine("no valid allocation anymore!");
                     return;
                 }
